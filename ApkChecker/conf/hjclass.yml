@@ -1,0 +1,36 @@
+
+
+
+#appium的启动程序路径
+#appiumApp: "appium"
+
+#是否截图
+screenShot: True
+
+#是否跳过当前错误包
+ignoreErrorApk: False
+
+#指定apk的包名和启动activity
+capability:
+  appPackage: "com.hujiang.hjclass"
+  appActivity: ".activity.SplashActivity"
+
+#每个包需要遍历的业务，支持TEXT、ID、XPATH和代码的定位方式
+workflow:
+- "click::text 稍后再说"
+- "click::text 在沪江网校中搜索"
+- "input::id edt_keyword test!"
+#- "script::self.driver.find_element_by_xpath(\"//*[@text='稍后再说']\").click()"
+#- "wait::5"
+#- "wait::text 呵呵 10"
+#- "click:xpath //*[@text='个人信息']"
+
+
+#安装应用过程中的意外弹窗处理，暂仅支持文本和ID
+installingActions:
+- "继续安装"
+
+#处理在workflow执行过程中的意外弹窗以及元素
+elementActions:
+- action: "click"
+  locator: "允许"

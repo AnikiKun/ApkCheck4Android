@@ -1,0 +1,45 @@
+
+
+
+#appium的启动程序路径
+#appiumApp: "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin//appium.js"
+
+#是否截图
+screenShot: False
+
+#是否跳过当前错误包
+ignoreErrorApk: False
+
+#指定apk的包名和启动activity
+capability:
+  appPackage: "com.hujiang.dict"
+  appActivity: ".ui.activity.WelcomeActivity"
+
+#每个包需要遍历的业务，支持TEXT、ID、XPATH和代码的定位方式(text和id支持android uiautomator的定位方式，写法：_text, _id)
+workflow:
+- "wait::_text 语音翻译新功能 15"
+- "swipe::left"
+- "wait::_text 详情页面新设计 15"
+- "swipe::left"
+- "click::_text 登录"
+- "switch::webview"
+- "input::xpath //*[@id='hp-login-normal']/div[1]/input 玉芳姐"
+- "input::xpath //*[@id='hp-login-normal']/div[3]/input zhangzili123"
+- "click::xpath //*[@id='hp-login-normal']/button"
+- "switch::native"
+- "click::_text 我的"
+- "wait::_text 玉芳姐"
+
+
+#安装应用过程中的意外弹窗处理，暂仅支持文本和ID
+installingActions:
+- "继续安装"
+- "确定"
+
+#处理在workflow执行过程中的意外弹窗以及元素
+elementActions:
+- action: "click"
+  locator: "允许"
+
+- action: "click"
+  locator: "确定"
