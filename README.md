@@ -50,12 +50,12 @@ workflow:
 - "swipe::left"
 - "click::_text>>>登录"
 - "switch::webview"
-- "input::xpath>>>//*[@id='hp-login-normal']/div[1]/input>>>玉芳姐"
-- "input::xpath>>>//*[@id='hp-login-normal']/div[3]/input>>>zhangzili123"
+- "input::xpath>>>//*[@id='hp-login-normal']/div[1]/input>>>username"
+- "input::xpath>>>//*[@id='hp-login-normal']/div[3]/input>>>heheda"
 - "click::xpath>>>//*[@id='hp-login-normal']/button"
 - "switch::native"
 - "click::_text>>>我的"
-- "wait::_text>>>玉芳姐"
+- "wait::_text>>>username"
 
 
 #安装应用过程中的意外弹窗处理，暂仅支持文本和ID
