@@ -2,6 +2,8 @@
 # ApkChecker
     一款基于Python与Appium的UI自动化检查工具。目前支持简单的Bvt自动化用例定制，以及支持批量渠道包遍历。
 
+    这个工具在15年到16年的时候就完成了，一直想着完善了再开源，后来又改了几版，还是决定开源出来给有需要的同学使用。
+
     做这个工具的思路其实还是因为每当发包时，总有上百个渠道包需要遍历，以前用Monkeyrunner写的版本不太稳定，换机器后经常失败。所以开发了这款工具，对MonkeyRunner版本有兴趣的同学可以参考https://github.com/AnikiKun/MonkeyRunner_ApkTest
 
 
